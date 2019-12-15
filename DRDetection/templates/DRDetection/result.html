@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+	<head> 
+	    <meta charset="UTF-8"> 
+	    <title>Diabetic Retinopathy Detection</title> 
+		<style>
+			body {
+				background-color: #222222;
+				color:orange;
+			}
+			h1 {
+				color:#ff6600;
+			}
+		</style>
+	</head>
+
+	<body> 
+		<h1>Result</h1>
+		<hr>
+		{% if stage_id == 0 %}
+			<h2>No Diabetic Retinopathy</h2>
+		{% elif stage_id == 1 %}
+			<h2>1 - Mild Nonproliferative Retinopathy</h2>
+		{% elif stage_id == 2 %}
+			<h2>2 - Moderate Nonproliferative Retinopathy</h2>
+		{% elif stage_id == 3 %}
+			<h2>3 - Severe Nonproliferative Retinopathy</h2>
+		{% elif stage_id == 4 %}
+			<h2>4 - Proliferative Retinopathy</h2>
+		{% else %}
+			<h2>Invalid Number</h2>
+		{% endif %}
+		<hr>
+	</body> 
+</html> 
